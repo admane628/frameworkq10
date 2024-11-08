@@ -1,0 +1,10 @@
+{% extends "collec_management/menu.html" %}
+{% load django_bootstrap5 %}
+    {% block bootstrap5_title %} {{collectionInexistant.title}} {% endblock %}
+
+{% block content %}
+    <h4>Collection : {{collectionInexistant.title}}</h4>
+    <p>Date : {{collectionInexistant.date}}</p>
+    <p>Description : {{collectionInexistant.description}}</p>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'collec_management/menu.html' %}
+{% load django_bootstrap5 %}
+{% block bootstrap5_title%} voulez -vous vraiment supprimer cette collection : {{ collec.title }}{% endblock %}
+{% block content%}
+
+
+	<h1>voulez -vous vraiment supprimer cette collection : {{ collec.title }}</h1>
+    <p>Description :{{collec.description}}</p>
+    <p>date :{{collec.date}}</p>
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_button button_type="submit" content="Supprimer" %}
+    </form>
+{% endblock %}
